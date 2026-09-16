@@ -41,5 +41,10 @@ if __name__ == "__main__":
         err_arr.append(magn_err)
     
     plt.figure(3)
-    plt.loglog(h_arr, err_arr)
+    '''
+    JZB Coment:
+    Make your plot of h_arr vs err_arr dots so that one can see the individual results.
+    To do so, add a 'o' input to the plt.loglog command.
+    '''
+    plt.loglog(h_arr, err_arr) # JZB Note: The issue at 10^-6 is due to machine precision. See here for more details: https://math.stackexchange.com/questions/815113/is-there-a-general-formula-for-estimating-the-step-size-h-in-numerical-different
     plt.show()
